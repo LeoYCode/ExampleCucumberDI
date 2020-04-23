@@ -21,9 +21,9 @@ public class MagicTabSteps implements En {
         });
 
         Then("^I should see Login in Sign Up buttons$", () -> {
-            assertTrue(loginSignUpPage.isLogInButtonDisplayed());
             assertTrue(loginSignUpPage.isLogInWithFacebookButtonDisplayed());
             assertTrue(loginSignUpPage.isSignUpButtonDisplayed());
+            assertTrue(loginSignUpPage.isLogInButtonDisplayed());
         });
     }
 }

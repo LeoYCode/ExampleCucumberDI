@@ -1,13 +1,16 @@
 package com.lionelyarboi.kickstarter.pageobjects;
 
 import com.lionelyarboi.kickstarter.pageobjects.BaseWaitPage;
+import com.lionelyarboi.kickstarter.pageobjects.pagepart.TabBar;
 import com.lionelyarboi.kickstarter.spring.PageObject;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
+import java.util.List;
+
 @PageObject
-public class LoginSignUpPage extends BaseWaitPage {
+public class LoginSignUpPage extends TabBar {
 
     @AndroidFindBy(id = "facebook_login_button")
     @iOSXCUITFindBy(id = "Log in with Facebook")
@@ -15,7 +18,7 @@ public class LoginSignUpPage extends BaseWaitPage {
 
     @AndroidFindBy(id = "login_button")
     @iOSXCUITFindBy(id = "Log in")
-    private MobileElement logInButton;
+    private List<MobileElement> logInButton;
 
     @AndroidFindBy(id = "sign_up_button")
     @iOSXCUITFindBy(id = "Sign up")
@@ -30,7 +33,10 @@ public class LoginSignUpPage extends BaseWaitPage {
     }
 
     public boolean isLogInButtonDisplayed() {
-        return logInButton.isDisplayed();
+        try {
+            return logInButton.get(1).isDisplayed();
+        } catch (IndexOutOfBoundsException e) {
+            return logInButton.get(0).isDisplayed();
+        }
     }
-
 }

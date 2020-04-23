@@ -53,12 +53,12 @@ public class MobileCapabilities {
         }
     }
 
-    public DesiredCapabilities getCapabilities() {
+    protected DesiredCapabilities getCapabilities() {
         setCapabilities();
         return capabilities;
     }
 
-    public String getPlatform() {
+    protected String getPlatform() {
         return platform;
     }
 }

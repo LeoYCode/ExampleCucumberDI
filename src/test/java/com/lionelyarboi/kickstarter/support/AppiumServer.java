@@ -22,7 +22,7 @@ public class AppiumServer {
             server.start();
         }
     }
-    public void stopService() {
+    protected void stopService() {
         server.stop();
     }
 

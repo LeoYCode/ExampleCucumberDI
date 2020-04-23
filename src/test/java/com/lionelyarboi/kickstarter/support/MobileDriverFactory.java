@@ -1,6 +1,7 @@
 package com.lionelyarboi.kickstarter.support;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,12 +18,12 @@ public class MobileDriverFactory {
     @Autowired
     private MobileCapabilities mobileCapabilities;
 
-    private AppiumDriver driver;
+    private AppiumDriver<MobileElement> driver;
 
     private int WAIT_TIMEOUT = 10;
 
     @Bean(name = "mobileDriver")
-    public AppiumDriver mobileDriver() {
+    public AppiumDriver<MobileElement> mobileDriver() {
         appiumServer.startAppiumServer();
         switch (mobileCapabilities.getPlatform()) {
             case "ios":
@@ -42,6 +43,10 @@ public class MobileDriverFactory {
             default:
                 throw new IllegalArgumentException("Unexpected value: " + mobileCapabilities.getPlatform().toLowerCase());
         }
+        return driver;
+    }
+
+    public AppiumDriver<MobileElement> getDriver() {
         return driver;
     }
 
