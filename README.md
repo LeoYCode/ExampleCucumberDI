@@ -3,7 +3,7 @@
 This is an example maven framework project demonstrating, the use of Cucumber JVM, Springs dependency injection with Appium Driver for testing KickStarter opensource native iOS/Android app.
 
 <h2>Dependency Injection</h2>
-The project has been setup that, each platforms page object is driven from a single page, which defines both iOS and Android locators.
+The project has been setup in a way such each platforms page object is driven from a single page, which defines both iOS and Android locators.
 
 
 I have created a custom page object Spring annotation 
@@ -48,8 +48,10 @@ replace ```iPhone 8``` with an available device.
 ```mvn clean test -Dplatform.name=ios -Dplatform.version=13.3 -Ddevice.name="iPhone 8" -Davd.name=""```
 
 <h3>Android</h3>
-If you don't have an Android emulator already setup you can download here https://developer.android.com/studio, after downloading follow the steps to setup https://developer.android.com/studio/run/managing-avds
+If you don't have an Android emulator already setup you can download here https://developer.android.com/studio, after downloading follow the steps to setup an avd https://developer.android.com/studio/run/managing-avds
+
 
 ```mvn clean test -Dplatform.name=android -Dplatform.version=10 -Ddevice.name=emulator-5554 -Davd.name=Pixel_3a_XL_API_28```
 
+This framework is setup to also run on real devices.
 Test run reports are generated in root directory named `report` this can be opened in any browser.
