@@ -1,6 +1,6 @@
-# Cucumber, Appium, Spring DI , Cross Mobile Platform
+# Cucumber JVM, Appium, Spring DI , Cross Mobile Platform
 
-This is an example mavenf ramework project demonstrating, the use of Cucumber, Springs dependency injection with Appium Driver for testing KickStarter opensource native iOS/Android app.
+This is an example maven framework project demonstrating, the use of Cucumber JVM, Springs dependency injection with Appium Driver for testing KickStarter opensource native iOS/Android app.
 
 <h2>Dependency Injection</h2>
 The project has been setup that, each platforms page object is driven from a single page, which defines both iOS and Android locators.
