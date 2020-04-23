@@ -16,7 +16,7 @@ public class MagicTabPage extends TabBar {
 
     public LoginSignUpPage clickSignUpOrLoginButton() {
         try{
-            signUpOrLogIn.get(2).click();
+            signUpOrLogIn.get(1).click();
         }catch (IndexOutOfBoundsException e ) {
             signUpOrLogIn.get(0).click();
         }
