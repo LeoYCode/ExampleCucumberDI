@@ -54,4 +54,6 @@ If you don't have an Android emulator already setup you can download here https:
 ```mvn clean test -Dplatform.name=android -Dplatform.version=10 -Ddevice.name=emulator-5554 -Davd.name=Pixel_3a_XL_API_28```
 
 This framework is setup to also run on real devices.
+
+
 Test run reports are generated in root directory named `report` this can be opened in any browser.
