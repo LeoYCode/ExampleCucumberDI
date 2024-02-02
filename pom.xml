@@ -13,7 +13,7 @@
         <cucumber.java8.version>5.5.0</cucumber.java8.version>
         <cucumber.spring.version>5.5.0</cucumber.spring.version>
         <cucumber.junit.version>5.5.0</cucumber.junit.version>
-        <spring.context.version>5.2.0.RELEASE</spring.context.version>
+        <spring.context.version>5.2.22.RELEASE</spring.context.version>
         <appium.version>7.3.0</appium.version>
         <platform.name>android</platform.name>
         <platform.version>10</platform.version>
